@@ -1,19 +1,12 @@
 <template>
   <div id="app">
-    <Header></Header>
     <router-view></router-view>
-    <Footer></Footer>
   </div>
 </template>
 <script>
-import Header from "@/components/header.vue";
-import Footer from "@/components/footer.vue";
 export default {
   name: "app",
-  components: {
-    Header,
-    Footer
-  }
+  components: {}
 };
 </script>
 
@@ -27,17 +20,11 @@ body {
   background: #dde0e6;
 }
 #app {
+  height: 100%;
+  width: 100%;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-.el-menu--horizontal .el-menu--popup-bottom-start {
-  margin-top: 0px;
-}
-ul {
-  list-style-type: none;
-  padding: 0px;
-  margin: 0px;
 }
 /* 不可复制 */
 * {

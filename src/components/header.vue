@@ -1,15 +1,13 @@
 <template>
-  <header class="content">
-    <el-menu
-      :default-active="activeIndex"
-      class="el-menu-demo"
-      mode="horizontal"
-      @select="handleSelect"
-      background-color="#1C2327"
-      text-color="#fff"
-      active-text-color="#ffd04b"
-    >
-      <div class="user-title">XX的个人博客  |<span>   ❤爱的人正在路上❤</span></div>
+  <header class="header-content">
+    <el-menu :default-active="activeIndex"
+             class="el-menu-demo"
+             mode="horizontal"
+             @select="handleSelect"
+             background-color="#1C2327"
+             text-color="#fff"
+             active-text-color="#ffd04b">
+      <div class="user-title">XX的个人博客 |<span> ❤爱的人正在路上❤</span></div>
       <el-menu-item index="/mian">博客首页</el-menu-item>
       <el-menu-item index="/personal/notes">个人笔记</el-menu-item>
       <el-submenu index="/technology">
@@ -32,20 +30,19 @@ export default {
       activeIndex: "/mian"
     };
   },
-  created() {},
+  created() { },
   methods: {
     handleSelect(key, keyPath) {
       console.log("切换标签页");
     }
   },
-  mounted() {},
+  mounted() { },
   watch: {}
 };
 </script>
 
 <style lang="less" scoped>
-.content {
-  height: 100%;
+.header-content {
   width: 100%;
   .user-title {
     margin-right: 100px;
@@ -54,21 +51,29 @@ export default {
     color: #fff;
     font-size: 22px;
     font-weight: bold;
-    span{
+    span {
       font-size: 15px;
       color: cadetblue;
     }
   }
-  .user-login{
+  .user-login {
     margin-left: 240px;
     height: 60px;
     line-height: 60px;
     color: #fff;
     font-size: 13px;
     font-weight: bold;
-    a{
-
+    a {
     }
+  }
+  .el-menu--horizontal .el-menu--popup-bottom-start {
+    margin-top: 0px;
+  }
+  ul {
+    width: 100%;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
   }
   ul.el-menu-demo.el-menu--horizontal.el-menu {
     display: flex;
