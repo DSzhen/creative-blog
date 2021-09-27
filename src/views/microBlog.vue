@@ -15,7 +15,7 @@
   </div>
 </template>
 <script>
-import Header from "@/components/header.vue";
+import Header from "@/components/microHeader.vue";
 import microTree from "@/components/microTree.vue";
 export default {
   name: "microBlog",
@@ -39,6 +39,11 @@ export default {
   width: 100%;
   position: relative;
   overflow: hidden;
+  .microBlog-Header {
+    ul {
+      background-color: #fff !important;
+    }
+  }
   .microBlog-content {
     height: calc(100% - 65px);
     width: 100%;

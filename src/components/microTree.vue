@@ -1,9 +1,5 @@
 <template>
   <div class="org-tree">
-    <el-input placeholder="输入关键字进行过滤"
-              v-model="filterText"
-              clearable>
-    </el-input>
     <el-tree :data="treeData"
              :props="defaultProps"
              default-expand-all
@@ -27,7 +23,6 @@ export default {
   name: "OrgTree",
   data() {
     return {
-      filterText: "",
       treeData: [],
       arrExpanded: [],
       defaultProps: {
@@ -35,11 +30,6 @@ export default {
         label: "name"
       },
       projectObj: {}
-    }
-  },
-  watch: {
-    filterText(val) {
-      this.$refs.tree.filter(val)
     }
   },
   mounted() {
